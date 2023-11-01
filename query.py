@@ -9,10 +9,12 @@ def search_cast(search):
     print(search)
 
 def list_movies():
-    print('movies')
+    for movie in movies._movies:
+        print(movie["name"])
+   
 
 while True:
-    print("q: quit \nsn: search movie names \nsc: search casts \nlist: prints all movie names \n: ")
+    print("\nq: quit \nsn: search movie names \nsc: search casts \nlist: prints all movie names \n:", end='')
     userInput = input()
     if userInput == 'q':
         print('Have a nice day')
