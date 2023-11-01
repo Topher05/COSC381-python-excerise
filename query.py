@@ -10,7 +10,16 @@ def search_movie(search):
     
 
 def search_cast(search):
-    print(search)
+    search.lower()
+    for movie in movies._movies:
+        castList = []
+        for name in movie['cast']:
+            if search in name.lower():
+                castList.append(name)
+                
+        if castList:
+            print(movie["name"])
+            print(castList)
 
 def list_movies():
     for movie in movies._movies:
