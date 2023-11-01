@@ -3,7 +3,11 @@ from movies import Movies
 movies = Movies('./movies.txt')
 
 def search_movie(search):
-    print(search)
+    search.lower()
+    for movie in movies._movies:
+        if search in movie["name"].lower():
+            print(movie["name"])
+    
 
 def search_cast(search):
     print(search)
